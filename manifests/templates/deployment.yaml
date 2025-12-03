@@ -1,0 +1,25 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stunning-portfolio-d840b523
+  labels:
+    app: stunning-portfolio-d840b523
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: stunning-portfolio-d840b523
+  template:
+    metadata:
+      labels:
+        app: stunning-portfolio-d840b523
+    spec:
+      containers:
+        - name: stunning-portfolio-d840b523
+          image: docker.io/phengbunath/stunning-portfolio-d840b523:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
