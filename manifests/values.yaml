@@ -1,0 +1,10 @@
+namespace: smartops-api
+
+image:
+  imageRepository: docker.io/phengbunath/stunning-portfolio-d840b523
+  tag: 1
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
